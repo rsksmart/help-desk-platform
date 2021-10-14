@@ -1,3 +1,1 @@
 # help-desk-platform
-
-test

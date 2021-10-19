@@ -59,34 +59,6 @@ h3,
     font-size: 47px
 }
 
-.espanol .h1_subtitle,
-.portugues .h1_subtitle,
-.rusian .h1_subtitle {
-    font-size: 35px
-}
-
-.homepage h2 {
-    font-size: 55px;
-}
-
-@media (max-width:991px) {
-    .rusian.homepage h2 {
-        word-break: break-all;
-    }
-}
-
-.homepage #newsletter h2 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 47px;
-    margin-bottom: 30px;
-}
-
-@media (max-width:400px) {
-    .homepage #newsletter h2 {
-        font-size: 30px;
-    }
-}
-
 h1,
 h3 {
     font-weight: 400;
@@ -96,8 +68,6 @@ h4 {
     color: #000;
 }
 
-
-
 .h1_subtitle {
     margin-bottom: 30px;
 }
@@ -105,9 +75,7 @@ h4 {
 @media (max-width:576px) {
 
     h1,
-    h3,
-    .step-by-step h2,
-    .h1_subtitle {
+    h3 {
         font-size: 30px
     }
 }
@@ -163,6 +131,9 @@ hr {
 .black {
     color: #000000;
 }
+
+
+
 
 /* === PROGRESS === */
 .progress {
@@ -221,7 +192,12 @@ hr {
 }
 
 #accordion-faqs {
-    border-top: 1px solid #00b520
+    border-top: 1px solid #00b520;
+}
+
+.faq_row{
+    width: 100%;
+    display: block;
 }
 
 #accordion-faqs .card {
@@ -232,6 +208,12 @@ hr {
 
 #accordion-faqs .card-header {
     background-color: unset;
+    border-bottom: unset;
+    padding: 0
+}
+
+#accordion-faqs .card-header:hover {
+    background-color: #ebebeb;
     border-bottom: unset;
     padding: 0
 }
@@ -277,15 +259,9 @@ hr {
 }
 
 #accordion-faqs .btn-link {
-    font-size: 30px;
+    font-size: 24px;
     width: 100%;
     text-align: left;
-}
-
-@media (max-width: 991px) {
-    #accordion-faqs .btn-link {
-        font-size: 18px;
-    }
 }
 
 #accordion-faqs .btn-link:hover {
@@ -300,7 +276,7 @@ hr {
 
 @media (max-width: 991px) {
     #accordion-faqs .btn-link .fa {
-        font-size: 18px;
+        font-size: 21px;
     }
 }
 
@@ -317,28 +293,15 @@ hr {
     display: flex;
     justify-content: center;
     margin-top: 80px;
+    position: relative;
+    margin-bottom: 18vh;
 }
 .main_row{
     width: 55%;
 }
 
-#category {
-    height: 100vh;
-    color: #000;
-}
 
-@media (max-width:991px) {
-    #category {
-        height: auto;
-        padding-top: 100px;
-    }
-}
-#category a{
-    color: #00B520;
-    display: flex;
-   }
-
-   .card-title-ans{
+.card-title-ans{
     text-align: left;
     font-weight: bold;
     line-height: 3rem;
@@ -351,6 +314,46 @@ hr {
     margin-bottom: 3.5rem;
 }
 
+@media (max-width:860px) {
+    .btn_container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .btn_row{
+        justify-content: center !important;
+        flex-direction: column-reverse !important;
+    }
+    .cta_btn{
+        width: 205px;
+        margin-bottom: 25px;
+    }
+    .back_btn{
+        width: 205px;
+    }
+}
+
+@media (max-width:635px) {
+    .card-title-ans h2{
+       font-size: 3rem;
+    }
+    .progbar p{
+        font-size: smaller;
+    }
+    .main_row{
+        width: 85%;
+    }
+    .circle-99 {
+      display: none;
+      
+    }
+    .circle-100 {
+    display: none;
+    }
+    #accordion-faqs .btn-link {
+        font-size: 18px;
+    }
+}
 
 .progbar {
     display: flex;
@@ -368,21 +371,22 @@ hr {
 
 
 .circle-99 {
-    width: 120px;
+    width: 100px;
     transform: rotateY(180deg);
     right: 0;
+    bottom: 0;
   
 }
 
 .circle-100 {
     width: 25px;
     right: 10%;
-
+    bottom: 0;
 }
 
 @media (max-width:768px) {
     .circle-99 {
-        width: 60px;
+        width: 70px;
       
     }
 
@@ -498,13 +502,12 @@ hr {
 /* ==== BUTTONS ====*/
 
 .btn_container{
+    margin-bottom: 10vh;
+    width: 100%;
+}
+.btn_row{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10vh;
-}
-
-.btn_row{
-    width: 55%;
 }
 
 .cta_btn{
@@ -546,3 +549,8 @@ hr {
     box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
+
+
+
+
+

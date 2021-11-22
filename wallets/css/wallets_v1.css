@@ -48,7 +48,6 @@ h4,
 h5,
 h6,
 .h1_subtitle {
-    font-family: Quicksand, sans-serif;
     line-height: 1;
 }
 
@@ -63,13 +62,14 @@ h3,
     font-size: 55px;
 }
 
-
 h1,
 h3 {
     font-weight: 400;
 }
 
-
+h4 {
+    margin-bottom: 0;
+}
 
 .h1_subtitle {
     margin-bottom: 30px;
@@ -79,7 +79,6 @@ h3 {
 
     h1,
     h3,
-    .step-by-step h2,
     .h1_subtitle {
         font-size: 30px
     }
@@ -138,8 +137,6 @@ hr {
 }
 
 
-
-
 /* === PROGRESS === */
 .progress {
     background: #e6e7e8;
@@ -162,18 +159,11 @@ hr {
   }
   
   @keyframes load {
-    0% { width: 0%; }
-    100% { width: 33%; }
+    0% { width: 33%; }
+    100% { width: 66%; }
   }
 
-
-
-
-/* ==== HOMEPAGE ==== */
-
-.text{
-    padding-right: 15px;
-}
+/* ==== MAIN ==== */
 .main_cont{
     display: flex;
     justify-content: center;
@@ -184,18 +174,10 @@ hr {
 .main_row{
     width: 60%;
 }
-.main_row a:hover{
-    background-color: #ebebeb;
-    transition: ease-in-out .5s ease !important;
-    color: #828183;
+.text{
+    padding-right: 15px;
 }
 
-.category-sec {
-    display: grid;
-    place-items: center;
-    position: relative;
-    margin-bottom: 5vh;
-}
 .cat-card{
     display: flex;
     justify-content: space-between;
@@ -206,6 +188,13 @@ hr {
     padding: 15px 45px 15px 45px;
     font-family: 'Open Sans', sans-serif;
     font-size: 24px;
+    color: #828183;
+   
+}
+
+.cat-card:hover{
+    background-color: #ebebeb;
+    transition: ease-in-out .5s !important;
     color: #828183;
 }
 
@@ -224,6 +213,13 @@ hr {
     color: #828183;
 }
 
+.cat-card-btm:hover{
+    background-color: #ebebeb;
+    transition: ease-in-out .5s ease !important;
+    color: #828183;
+}
+
+
 .card-title{
     text-align: left;
     font-weight: bold;
@@ -234,8 +230,8 @@ hr {
     font-weight: bold;
     font-size: 3.5rem;
     color: black;
+    font-family: 'Quicksand', sans-serif;
 }
-
 .card-title p{
     color: #606163;
     margin-top: 3rem;
@@ -252,6 +248,7 @@ hr {
 }
 
 
+
 @media (max-width:709px) {
     .progbar p{
         font-size: 18px;
@@ -261,14 +258,10 @@ hr {
     }
     .cat-card{
         padding: 15px 25px 15px 25px;
+        font-size: 18px;
     }
     .cat-card-btm{
         padding: 15px 25px 15px 25px;
-    }
-    .cat-card h4{
-        font-size: 18px;
-    }
-    .cat-card-btm h4{
         font-size: 18px;
     }
     .icon{
@@ -277,8 +270,11 @@ hr {
     .card-title h2{
         font-size: 36px;
     }
+    .back_btn{
+        width: 100% !important;
+        font-size: 18px !important;
+    }
 }
-
 
 
 /* ====CIRCLES ==== */
@@ -351,7 +347,6 @@ hr {
     color: #000 !important;
     font-size: 24px;
     font-family: Quicksand, sans-serif;
-    font-weight: bold;
     position: relative;
 }
 
@@ -451,6 +446,90 @@ hr {
 .noevent {
     pointer-events: none;
     cursor: default !important;
+}
+
+
+/* ==== BUTTONS ====*/
+
+.btn_container{
+    margin-bottom: 10vh;
+    width: 100%;
+    margin-top: 3.7rem;
+}
+.btn_row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta_btn{
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 55px;
+    background-color: #00B520;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    transition: ease-out 0.3s;
+    border: none !important;
+    outline: none !important;
+}
+
+.cta_btn:hover {
+    color: white;
+    -webkit-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.back_btn {
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    height: 55px;
+    border: solid 2px #00B520;
+    background-color: white;
+    border-radius: 50px;
+    text-align: center;
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.back_btn:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.back_btn::before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #00B520;
+}
+
+.back_btn:hover::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    border-radius: 50px;
 }
 
 

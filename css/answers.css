@@ -204,19 +204,18 @@ hr {
     border: unset;
     border-bottom: 1px solid #00b520;
     border-radius: 0rem;
+    padding: 5px 0 5px 0;
+
 }
 
 #accordion-faqs .card-header {
     background-color: unset;
     border-bottom: unset;
-    padding: 0
+    padding: 0;
+    width: 100%;
 }
 
-#accordion-faqs .card-header:hover {
-    background-color: #ebebeb;
-    border-bottom: unset;
-    padding: 0
-}
+
 
 #accordion-faqs .card-body {
     padding: 1rem 65px;
@@ -244,12 +243,12 @@ hr {
 
 #accordion-faqs [data-toggle="collapse"] {
     color: #00b520;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
 }
 
 #accordion-faqs [data-toggle="collapse"].collapsed {
-    color: #000;
+    color: #828183;
 }
 
 /*#accordion-faqs .btn-link{color:#000;}*/
@@ -260,12 +259,14 @@ hr {
 
 #accordion-faqs .btn-link {
     font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
     width: 100%;
     text-align: left;
 }
 
 #accordion-faqs .btn-link:hover {
     text-decoration: none;
+    color: #00b520;
 }
 
 #accordion-faqs .btn-link .fa {
@@ -292,12 +293,12 @@ hr {
 .main_cont{
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 60px;
     position: relative;
-    margin-bottom: 18vh;
+    margin-bottom: 60px;
 }
 .main_row{
-    width: 55%;
+    width: 60%;
 }
 
 
@@ -314,44 +315,36 @@ hr {
     margin-bottom: 3.5rem;
 }
 
-@media (max-width:860px) {
-    .btn_container{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .btn_row{
-        justify-content: center !important;
-        flex-direction: column-reverse !important;
-    }
-    .cta_btn{
-        width: 205px;
-        margin-bottom: 25px;
-    }
-    .back_btn{
-        width: 205px;
-    }
-}
 
-@media (max-width:635px) {
+@media (max-width:753px) {
     .card-title-ans h2{
-       font-size: 3rem;
+       font-size: 36px;
     }
     .progbar p{
-        font-size: smaller;
+        font-size: 18px;
     }
     .main_row{
         width: 85%;
     }
-    .circle-99 {
-      display: none;
-      
-    }
-    .circle-100 {
-    display: none;
-    }
     #accordion-faqs .btn-link {
-        font-size: 18px;
+        font-size: 20px;
+    }
+    .cta_btn{
+        width: 250px !important;
+        font-size: 18px !important;
+    }
+    .back_btn{
+        width: 250px !important;
+        margin-bottom: 25px;
+        font-size: 18px !important;
+    }
+    .btn_row{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn_container{
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -359,10 +352,10 @@ hr {
     display: flex;
     justify-content: space-between;
     color: #58595b;
-    font-size: 20px;
+    font-size: 24px;
 }
 
-/* ==== CIRCLES ==== */
+/* ====CIRCLES ==== */
 /* circles in homepage */
 .circle {
     height: auto;
@@ -371,30 +364,50 @@ hr {
 
 
 .circle-99 {
-    width: 100px;
+    width: 35px;
     transform: rotateY(180deg);
     right: 0;
     bottom: 0;
-  
+ 
 }
 
 .circle-100 {
     width: 25px;
-    right: 10%;
-    bottom: 0;
-}
-
-@media (max-width:768px) {
-    .circle-99 {
-        width: 70px;
-      
-    }
-
-    .circle-100 {
+    left: 12%;
+    top: 32%;
    
-        width: 10px;
+}
+
+.circle-1 {
+    width: 65px;
+    left: 0;
+    bottom: 45%;
+    z-index: -100;
+}
+
+
+
+@media (max-width:753px) {
+    .circle-1{
+        width: 32px;
+    }
+    .circle-100{
+        display: none;
+    }
+    .circle-99{
+        width: 15px;
     }
 }
+
+@media (max-width:441px) {
+    .circle-1{
+        width: 16px;
+    }
+    .circle-99{
+        width: 7px;
+    }
+}
+
 /* ==== NAVBAR ==== */
 .logo {
     width: 150px;
@@ -406,17 +419,38 @@ hr {
     width: 90px !important;
 }
 
-.nav-link {
+.nav-link{
     color: #000 !important;
-    font-size: 16px;
+    font-size: 24px;
     font-family: Quicksand, sans-serif;
-    padding: 10px 15px !important;
-    font-weight: 400
+    position: relative;
 }
+
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;   
+    color: #00b520; 
+
+    transform: scaleX(.0);
+    transform-origin: right;
+    transition: transform 150ms ease-in;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(.6);
+    transform-origin: left;
+}
+
 
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
     .nav-link {
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 
@@ -429,11 +463,6 @@ hr {
     background: #fff
 }
 
-.navbar.header-scrolled {
-    background: #FFFFFF !important;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
-}
 
 .dropdown-item {
     display: block;
@@ -441,7 +470,6 @@ hr {
     padding: .25rem 1.5rem;
     clear: both;
     font-weight: 400;
-    color: #212529;
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
@@ -495,10 +523,6 @@ hr {
     pointer-events: none;
     cursor: default !important;
 }
-
-
-
-
 /* ==== BUTTONS ====*/
 
 .btn_container{
@@ -511,46 +535,100 @@ hr {
 }
 
 .cta_btn{
-    align-items: center;
     font-family: Quicksand, sans-serif;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 55px;
     background-color: #00B520;
     color: white;
-    padding: 10px 45px;
     border-radius: 50px;
     text-align: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    border: none;
+    transition: ease-out 0.3s;
+    border: none !important;
+    outline: none !important;
 }
+
 .cta_btn:hover {
+    color: white;
     -webkit-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    color: white;
 }
+
+
 
 .back_btn {
     font-family: Quicksand, sans-serif;
-    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    height: 55px;
     border: solid 2px #00B520;
     background-color: white;
-    padding: 10px 45px;
     border-radius: 50px;
     text-align: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
+    transition: ease-out 0.3s;
+    position: relative;
+    z-index: 1;
 }
 
 .back_btn:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
     -webkit-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
 }
 
 
+.back_btn::before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #00B520;
+}
 
+.back_btn:hover::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    border-radius: 50px;
+}
 
+.faq_btn{
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 55px;
+    background-color: #00B520;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    transition: ease-out 0.3s;
+    border: none;
+    outline: none;
+}
 
+.faq_btn:hover{
+    color: white;
+    -webkit-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+}

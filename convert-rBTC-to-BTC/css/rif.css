@@ -333,17 +333,38 @@ hr {
     width: 90px !important;
 }
 
-.nav-link {
+.nav-link{
     color: #000 !important;
-    font-size: 16px;
+    font-size: 24px;
     font-family: Quicksand, sans-serif;
-    padding: 10px 15px !important;
-    font-weight: 400
+    position: relative;
 }
+
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;   
+    color: #00b520; 
+
+    transform: scaleX(.0);
+    transform-origin: right;
+    transition: transform 150ms ease-in;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(.6);
+    transform-origin: left;
+}
+
 
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
     .nav-link {
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 
@@ -356,11 +377,6 @@ hr {
     background: #fff
 }
 
-.navbar.header-scrolled {
-    background: #FFFFFF !important;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
-}
 
 .dropdown-item {
     display: block;
@@ -368,7 +384,6 @@ hr {
     padding: .25rem 1.5rem;
     clear: both;
     font-weight: 400;
-    color: #212529;
     text-align: inherit;
     white-space: nowrap;
     background-color: transparent;
@@ -424,6 +439,7 @@ hr {
 }
 
 
+
 /* ==== BUTTONS ====*/
 
 .btn_container{
@@ -450,9 +466,6 @@ hr {
 }
 
 .back_btn:hover {
-    -webkit-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
     text-decoration: none;
 }
 

@@ -162,29 +162,19 @@ hr {
   }
 
 /*======= FAQS==========*/
+.video_wrapper{
+    position: relative;
+    padding-bottom: 56.25%;
+    /* Equals 16:9 */
+    height: 0;
+}
 
-
-.youtubeembed {
-    height: 385px;
+.video_wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-}
-
-@media (max-width: 1200px) {
-    .youtubeembed {
-        height: 385px
-    }
-}
-
-@media (max-width: 991px) {
-    .youtubeembed {
-        height: 385px;
-    }
-}
-
-@media (max-width: 768px) {
-    .youtubeembed {
-        height: 285px;
-    }
+    height: 100%;
 }
 
 #faqs{

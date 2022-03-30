@@ -84,13 +84,17 @@
                                 <div class="card-header" id="headingOne">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="fa" aria-hidden="true"></i> What type of operations can I do on the 2way-peg app?
+                                            <i class="fa" aria-hidden="true"></i> What is the Token Bridge?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion-faqs">
                                     <div class="card-body" style="text-align:justify">
-                                        <p>Currently, only peg-in (BTC to RBTC) operations can be done through the app. It is in the plans to add peg-out (RBTC to BTC) operations in the near future.</p>
+                                        <p>The Token Bridge is an interoperability protocol which allows users to move their own RSK or Ethereum ERC20 Tokens between networks in a quick and cost-efficient manner. You will be able to send your original tokens and receive an equivalent amount of Side Tokens on the other network and vice-versa.</p>
+                                        <p><b>Important! Don’t use the token bridge to send it to your exchange address, you won’t be able to claim it. Some exchanges, like Binance, don't support tokens that arrived from internal transactions (transactions made by smart contract).</b></p>
+                                        <p>The Token Bridge Dapp is available at:</p>
+                                        <p><b><u>Mainnet</u></b>: <a href="https://tokenbridge.rsk.co" target="_blank">tokenbridge.rsk.co</a></p>
+                                        <p><b><u>Testnet</u></b>: <a href="https://testnet.tokenbridge.rsk.co" target="_blank">testnet.tokenbridge.rsk.co</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -99,13 +103,13 @@
                                 <div class="card-header" id="headingTwo">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                            <i class="fa" aria-hidden="true"></i> Is there a minimum amount to make a peg-in?
+                                            <i class="fa" aria-hidden="true"></i> Is there a guide to use the RSK Token Bridge app?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion-faqs">
                                     <div class="card-body">
-                                        Yes, for Mainnet and Testnet there is a minimum of 0.005 BTC.
+                                        Yes. Follow the <a href="https://developers.rsk.co/tools/tokenbridge/dappguide/" target="_blank">Dapp guide</a> for more details on how to use the token bridge application.
                                     </div>
                                 </div>
                             </div>
@@ -114,13 +118,17 @@
                                 <div class="card-header" id="headingTwoBis">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoBis" aria-expanded="true" aria-controls="collapseTwoBis">
-                                            <i class="fa" aria-hidden="true"></i> Is there a maximum amount to make a peg-in?
+                                            <i class="fa" aria-hidden="true"></i> What wallet do I need to interact with the Token Bridge Dapp?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseTwoBis" class="collapse" aria-labelledby="headingTwoBis" data-parent="#accordion-faqs">
                                     <div class="card-body">
-                                        <p>Yes, for Mainnet and Testnet there is a maximum of 0.5 BTC per transaction.</p>
+                                        <p>You can use either Chrome or Chromium web browser, with one of the following wallet browser extensions:</p>
+                                        <p><a href="https://metamask.io/download.html" target="_blank">Metamask</a> using a <a href="https://developers.rsk.co/develop/apps/wallets/metamask/" target="_blank">custom network</a> to add the RSK network.</p>
+                                        <p><a href="https://www.poa.network/for-users/nifty-wallet" target="_blank">Nifty Wallet</a></p>
+                                        <p><a href="https://liquality.io/" target="_blank">Liquality Wallet</a></p>
+                                        <p>You can also use other wallets compatible with WalletConnect, like <a href="https://defiantapp.tech/" target="_blank">Defiant Wallet</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -130,13 +138,19 @@
                                 <div class="card-header" id="headingThree">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                            <i class="fa" aria-hidden="true"></i> Are there specific wallets that are compatible with the app?
+                                            <i class="fa" aria-hidden="true"></i> How does the Token Bridge work?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faqs">
-                                    <div class="card-body">
-                                        <p>Right now, the only allowed wallets to interact with the app are <b>Ledger</b> and <b>Trezor</b> hardware wallets.</p>
+                                    <div class="card-body" style="text-align:justify">
+                                        <p>The Token Bridge functionality is quite unique, yet simple to understand. The ratio of tokens during network transfer always remains 1:1 and behaves in the following manner:</p>
+                                        <p>When original tokens are moved to the other network:</p>
+                                        <p>- Original tokens are locked in the Token Bridge smart contract.</p>
+                                        <p>- Side Tokens are minted and assigned to the same address that originally called the bridge.</p>
+                                        <p>When Side Tokens are moved back from the other network:</p>
+                                        <p>- Side Tokens are burned.</p>
+                                        <p>- Original tokens are unlocked in the Token Bridge smart contract, and transferred to the same address that originally called the bridge contract.</p>
                                     </div>
                                 </div>
                             </div>
@@ -145,14 +159,13 @@
                                 <div class="card-header" id="headingFour">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                            <i class="fa" aria-hidden="true"></i> Are there compatible types of addresses?
+                                            <i class="fa" aria-hidden="true"></i> What is the difference between original tokens and Side Tokens?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion-faqs">
-                                    <div class="card-body">
-                                        <p>Yes, for Ledger, Segwit compatible and Legacy addresses; for Trezor, Segwit compatible, Legacy and Segwit Native addresses.</p>
-                                        <p>The New version of the app, that will be available soon: will also include segwit native for ledger.</p>
+                                    <div class="card-body" style="text-align:justify">
+                                        <p>The original token lives on the network that it was deployed on, for example Ethereum, while the Side Token is a representation of the original token on the other network, for example RSK.</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,14 +174,15 @@
                                 <div class="card-header" id="headingFive">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                            <i class="fa" aria-hidden="true"></i> What are the required confirmations for the peg-in to happen?
+                                            <i class="fa" aria-hidden="true"></i> Can any token be bridged over?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion-faqs">
-                                    <div class="card-body">
-                                        <p>For <b>Testnet</b>: 10 confirmations are needed.</p>
-                                        <p>For <b>Mainnet</b>: 100 confirmations are needed. 20 minutes are estimated for the transaction to be registered.</p>
+                                    <div class="card-body" style="text-align:justify">
+                                        <p>Only whitelisted tokens can cross the bridge.</p>
+                                        <p>You can find the updated tokens list at: <a href="https://tokenbridge.rsk.co/#token-list" target="_blank">https://tokenbridge.rsk.co/#token-list</a></p>
+                                        <p>Remember that Ethereum native tokens will transform into r(tokenName) and RSK native tokens will transform into e(tokenName)</p>
                                     </div>
                                 </div>
                             </div>
@@ -177,13 +191,13 @@
                                 <div class="card-header" id="headingSix">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                            <i class="fa" aria-hidden="true"></i> What is the refund BTC Address
+                                            <i class="fa" aria-hidden="true"></i> Is there a limit on how many tokens can be bridged over?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion-faqs">
                                     <div class="card-body" style="text-align: justify;">
-                                        <p>The refund BTC Address is an automatically generated Legacy type address derived from the user's device that is only used to recover the funds if the RSK’s 2WP Locking Cap hits the max value during the transaction. In that case, the funds can be recovered through this address.</p>
+                                        <p>There is a minimum and maximum amount per transaction and daily quotas. You can see them updated on <a href="https://tokenbridge.rsk.co/#token-list" target="_blank">https://tokenbridge.rsk.co/#token-list</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -192,13 +206,13 @@
                                 <div class="card-header" id="headingSeven">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                            <i class="fa" aria-hidden="true"></i> Can I choose what address is used as the refund BTC address?
+                                            <i class="fa" aria-hidden="true"></i> What are the fees for converting original tokens to Side Tokens and vice-versa? Who will be paying these fees?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion-faqs">
                                     <div class="card-body">
-                                        Unfortunately, you cannot choose the address that will be used as the refund BTC address. This address is an automatically generated Legacy type address.
+                                        There is a 0.2% fee charge when crossing the tokens, this fee goes to the validators as payment for crossing the transactions.
                                     </div>
                                 </div>
                             </div>
@@ -207,13 +221,14 @@
                                 <div class="card-header" id="headingEight">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
-                                            <i class="fa" aria-hidden="true"></i> Is there a high probability that the app's Locking Cap hits the max value during the transaction?
+                                            <i class="fa" aria-hidden="true"></i> How much do I have to wait for the tokens to cross after I submit the transaction?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion-faqs">
                                     <div class="card-body" style="text-align: justify;">
-                                        <p>There is an almost zero chance of the Locking Cap hitting the max value during the transaction. The precautionary measure of setting a refund address is to virtually make it as safe as possible for peg-ins. However, it is estimated that this will never happen. On the off chance it does, the funds are returned by accessing the refund address.</p>
+                                        <p>After you submit the transaction, you have to wait depending on the amount you want to cross, around 30 minutes for small amounts, 1 hour for medium amounts or 24 hours for large amounts for the tokens to cross. Times are approximate. The speed of transactions depends on the number of confirmations required. For more information, please read: <a href="https://tokenbridge.rsk.co/#important-details" target="_blank">Important details</a></p>
+                                        <p>You can check the status of the transaction in the <a href="https://tokenbridge.rsk.co/#account-transactions" target="_blank">Account Transactions</a> list. Please remember that all transactions listed here will not appear if you use another device.</p>
                                     </div>
                                 </div>
                             </div>
@@ -223,13 +238,13 @@
                                 <div class="card-header" id="headingNine">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
-                                            <i class="fa" aria-hidden="true"></i> Why is there no ‘Back’ button? 
+                                            <i class="fa" aria-hidden="true"></i> What is the transaction hash? How can I check the status of a transaction?
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion-faqs">
                                     <div class="card-body" style="text-align: justify;">
-                                        <p>The "Back" button is disabled from the flow due to some wallet constrictions. If a mistake has been made, the operation will need to be restarted.</p>
+                                        <p>Usually when there's a problem with a transaction, it will be necessary to have the transaction hash. It contains all the details about the transaction. You can check the status of the transaction in the <a href="https://tokenbridge.rsk.co/#account-transactions" target="_blank">Account Transactions</a> list. Please remember that all transactions listed here will not appear if you use another device.</p>
                                     </div>
                                 </div>
                             </div>
@@ -239,13 +254,14 @@
                                 <div class="card-header" id="headingTen">
                                     <h5 class="mb-0">
                                         <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
-                                            <i class="fa" aria-hidden="true"></i> What happens if I make a mistake during the peg-in process, but I have not yet confirmed the operation?
+                                            <i class="fa" aria-hidden="true"></i> I have transferred tokens from Ethereum, and after 24 hours have not received the tokens on RSK
                                         </button>
                                     </h5>
                                 </div>
                                 <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion-faqs">
                                     <div class="card-body" style="text-align: justify;">
-                                        <p>You will need to restart the process from the beginning.</p>
+                                        <p>Approximately 24 hours need to pass from your transaction for the transfer to occur. For RSK it is 2880 blocks per 24 hours and for ETH 5760 blocks per 24 hours. The tokens will be transferred once the daily amount of blocks have passed from the transaction block number, plus 5 minutes. Remember that 24 hours is an approximation, it is not fixed.</p>
+                                        <p>If the difference between the Current Block and the Transaction Block is more than 5760 blocks, look in <a href="https://explorer.rsk.co/" target="_blank">RSK Explorer</a> at the SAME ADDRESS on RSK. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the <b>#tokenbridge</b> channel on RSK Open slack (go to <a href="https://developers.rsk.co/slack" target="_blank">Open Slack Community</a> to join).</p>
                                     </div>
                                 </div>
                             </div>
@@ -255,13 +271,14 @@
                             <div class="card-header" id="headingEleven">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
-                                        <i class="fa" aria-hidden="true"></i> Why can I not see all my Bitcoins in the app?
+                                        <i class="fa" aria-hidden="true"></i>I have transferred tokens from RSK, and after 24 hours have not received the tokens on Ethereum
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion-faqs">
                                 <div class="card-body" style="text-align: justify;">
-                                    <p>There is a limit to the number of addresses the app will extract, up to 6 in Ledger and 10 in Trezor. Thus, there is a chance you see less value in your wallet than what you actually have since you will only see the addresses that are extracted. </p>
+                                    <p>Approximately 24 hours need to pass from your transaction for the transfer to occur. For RSK it is 2880 blocks per 24 hours and for ETH 5760 blocks per 24 hours. The tokens will be transferred once the daily amount of blocks have passed from the transaction block number, plus 5 minutes. Remember that 24 hours is an approximation, it is not fixed.</p>
+                                    <p>If the difference between the Current Block and the Transaction Block is more than 2880 blocks, look in <a href="https://etherscan.io/" target="_blank">Etherscan</a> at the SAME ADDRESS on RSK. If you do not see the correct balance in the tokens tab, please share your Transaction Hash in the <b>#tokenbridge</b> channel on RSK Open slack (go to <a href="https://developers.rsk.co/slack" target="_blank">Open Slack Community</a> to join).</p>
                                 </div>
                             </div>
                         </div>
@@ -271,13 +288,13 @@
                             <div class="card-header" id="headingTwelve">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
-                                        <i class="fa" aria-hidden="true"></i> How can I access the funds that I cannot see in the app, due to the limit in addresses extracted?
+                                        <i class="fa" aria-hidden="true"></i> Is RSK Token Bridge the same as Sovryn Token Bridge?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion-faqs">
                                 <div class="card-body" style="text-align: justify;">
-                                    <p>You can transfer the funds to the addresses available. We are working on an instruction manual to help with this process.</p>
+                                    <p>Sovryn Token Bridge is not the same as the RSK Token Bridge. If you have used <a href="https://bridge.sovryn.app" target="_blank">bridge.sovryn.app</a>, and you have an issue, please ask on the <a href="https://discord.com/channels/729675474665603133/813119624098611260" target="_blank">Sovryn discord group</a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -287,13 +304,14 @@
                             <div class="card-header" id="headingThirteen">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen">
-                                        <i class="fa" aria-hidden="true"></i> The app doesn't seem to be working.
+                                        <i class="fa" aria-hidden="true"></i> What happens if I have sent RSK tokens directly to an Ethereum address without the Token bridge? What can I do?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion-faqs">
                                 <div class="card-body" style="text-align: justify;">
-                                    Make sure you are accessing the app from a compatible browser. Currently, the app only works from a desktop Chrome web browser. In the next version, Brave will also be supported.
+                                    <p>Note that if you have tokens on the RSK network, such as RIF or RDOC, including “crossed” tokens such as rUSDT or rDAI, <b>you should not send them to an Ethereum address in a regular transaction. This does not work!</b> Instead, you should use the RSK Token Bridge to cross the tokens from one blockchain to the other.</p>
+                                    <p>If you have done this already, and sent the tokens to an address that is not under your control - where you do not have the private key or the seed phrase - then you have burnt the tokens, and they are not recoverable. If you have done this already, and sent the tokens to an address that is under your control - where you do have the private key or the seed phrase - then it may be possible to recover your tokens.</p>
                                 </div>
                             </div>
                         </div>
@@ -303,13 +321,14 @@
                             <div class="card-header" id="headingFourteen">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="true" aria-controls="collapseFourteen">
-                                        <i class="fa" aria-hidden="true"></i>  What browsers support the app?
+                                        <i class="fa" aria-hidden="true"></i>  I have multiple wallets installed, but am only given one wallet option, what can I do?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion-faqs">
                                 <div class="card-body" style="text-align: justify;">
-                                    Currently, the app only works from a desktop Chrome web browser. In the next version, Brave will also be supported.
+                                    <p>Decentralized apps on websites, such as the RSK Token Bridge, interact with the blockchain network through a standard interface known as a web3 provider. Each browser wallet attempts to “inject” a web3 provider as soon as it is loaded. This means that if you have multiple browser extensions doing the same thing, one of them will override the other(s).</p>
+                                    <p>In order to avoid this problem, and if you already have multiple wallets installed, is to choose which wallet you wish to use, and disable the other ones. To do this in Chrome, enter <b>chrome://extensions/</b> in your address bar, which brings you to a settings screen that lists all of the browser extensions that you have installed. Click on the toggle button to disable all of the browser extensions that inject web3 providers, except for the one that you wish to use. After this go to the RSK token bridge again, and refresh.</p>
                                 </div>
                             </div>
                         </div>
@@ -319,13 +338,13 @@
                             <div class="card-header" id="headingFifteen">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="true" aria-controls="collapseFifteen">
-                                        <i class="fa" aria-hidden="true"></i> Is the app available on mobile?
+                                        <i class="fa" aria-hidden="true"></i> I don’t see my transaction on the Token Bridge list
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion-faqs">
                                 <div class="card-body" style="text-align: justify;">
-                                    Unfortunately the app is only available on desktop.
+                                    <p>A way for you to recover that transaction, could be to use the explorer to navigate through the transactions originated from that wallet and send them to the RSK Cross Chain Bridge. If the transaction is easily identifiable, you can pick the hash and search for it in the search bar. Additionally, the transactions list is stored in the local cache, so it’s not shared across devices, and it’s erased if you clear your browser cookies and temporary files. If are still having trouble please let us know in the <b>#tokenbridge</b> channel on RSK Open slack (go to <a href="https://developers.rsk.co/slack" target="_blank">Open Slack Community</a> to join).</p>
                                 </div>
                             </div>
                         </div>
@@ -335,13 +354,62 @@
                             <div class="card-header" id="headingSixteen">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="true" aria-controls="collapseSixteen">
-                                        <i class="fa" aria-hidden="true"></i> When will the new version of the app be available? 
+                                        <i class="fa" aria-hidden="true"></i> I have transferred tokens from Ethereum to RSK, but I do not see them in Liquality
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion-faqs">
                                 <div class="card-body" style="text-align:justify">
-                                    <p>The new version of the app will be available in the coming weeks.</p>
+                                    <p>RSK has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Liquality respects this convention. If you are not seeing your tokens, copy your mnemonic or private key and use <a href="https://metamask.io/download.html" target="_blank">Metamask</a> and add RSK as a <a href="https://developers.rsk.co/develop/apps/wallets/metamask/" target="_blank">custom network</a>, to get the same address as ethereum.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <!-- -->
+                        <div class="card">
+                            <div class="card-header" id="headingSeventeen">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="true" aria-controls="collapseSeventeen">
+                                        <i class="fa" aria-hidden="true"></i> I have transferred tokens from RSK to Ethereum, but I do not see them in Liquality
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordion-faqs">
+                                <div class="card-body" style="text-align:justify">
+                                    <p>RSK has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Liquality respects this convention. If you are not seeing your tokens, copy your mnemonic or private key and use My Ether Wallet or My Crypto with the RSK derivation path m/44’/137’/0’/0 to get the same address as RSK.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <!-- -->
+                        <div class="card">
+                            <div class="card-header" id="headingEighteen">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="true" aria-controls="collapseEighteen">
+                                        <i class="fa" aria-hidden="true"></i> I have transferred tokens from Ethereum to RSK, but I do not see them in Nifty
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordion-faqs">
+                                <div class="card-body" style="text-align:justify">
+                                    <p>RSK has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Nifty respects this convention. In Nifty, add RSK as Custom RPC, to get the same address as ethereum, see: <a href="https://developers.rsk.co/tutorials/resolve-nifty-issue/" target="_blank">Resolve Nifty Issue</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+                        <!-- -->
+                        <div class="card">
+                            <div class="card-header" id="headingNineteen">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="true" aria-controls="collapseNineteen">
+                                        <i class="fa" aria-hidden="true"></i> I have transferred tokens from RSK to Ethereum, but I do not see them in Nifty
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#accordion-faqs">
+                                <div class="card-body" style="text-align:justify">
+                                    <p>RSK has a different derivation path (m/44’/137’/0’/0) from Ethereum (m/44’/60’/0’/0). Nifty respects this convention. If you are not seeing your tokens, copy your mnemonic or private key and use My Ether Wallet or My Crypto with the RSK derivation path m/44’/137’/0’/0 to get the same address as RSK.</p>
                                 </div>
                             </div>
                         </div>

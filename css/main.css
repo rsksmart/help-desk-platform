@@ -251,8 +251,56 @@ hr {
     font-size: 24px;
 }
 
+.cta_btn{
+    font-family: Quicksand, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 55px;
+    background-color: #00B520;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    transition: ease-out 0.3s;
+    border: none !important;
+    outline: none !important;
+}
+
+.cta_btn:hover {
+    color: white;
+    -webkit-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn_container{
+    margin-bottom: 10vh;
+    width: 100%;
+}
+.btn_row{
+    display: flex;
+    justify-content: right;
+    margin-right: 300px;
+}
+
 
 @media (max-width:709px) {
+    .btn_row{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .btn_container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .cta_btn{
+        width: 250px !important;
+        font-size: 18px !important;
+    }
     .progbar p{
         font-size: 18px;
     }

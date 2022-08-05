@@ -30,7 +30,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -151,16 +152,45 @@
                                     </h5>
                                 </div>
                                 <div id="collapseThree1" class="collapse" aria-labelledby="headingThree1" data-parent="#accordion-faqs">
-                                    <div class="card-body" style="text-align: justify;">
-                                        <p>If you are using a fresh installed instance of Defiant, the app will prompt you to choose between creating a new wallet or importing one. In case you already have a wallet, you can add a new one by also importing it from: "<b>Menu</b>" => ‘<b>My Wallets</b>” => “<b>Import</b>”. In both cases, you can import a wallet by entering a <b>Seed Phrase</b> of words (also known as Recovery Phrase) or a <b>Private Key</b>.</p>
-                                        <p>Here are the steps to do it under the "<b>Import wallet</b>" menu:</p>
-                                        <p>- <u><b>Using a Seed/Recovery Phrase</b></u>-</p>
-                                        <p>1) Enter the words of your seed phrase into the text field, separated by spaces.</p>
-                                        <p>2) Choose if you want your address to be different or the same for all your blockchains.</p>
-                                        <p><b>NOTE</b>: If you are trying to import a wallet that has a RSK Derivation Path (e.g. rWallet), you should tap on "<b>Custom</b>" and set the Derivation Path to RSK Mainnet value: <b>m/44’/137’/0’/0</b></p>
-                                        <p>3) Choose the coins/tokens you want to use in your wallet. You will be able to modify them later.</p>
-                                        <p>4) Tap on "Continue". If everything is ok, you will have successfully completed the importing process.</p>
-                                        <img src="./img/defiant/" style="width: 50%; height: 50%;" alt="Defiant import wallet">
+                                <div class="card-body" style="text-align: justify;">
+                                    <p>If you are using a fresh installed instance of Defiant, the app will prompt you to choose between creating a new wallet or importing one.</p>
+                                    <p>In case you already have a wallet, you can add a new one by also importing it from: "<b>Menu</b>" => ‘<b>My Wallets</b>” => “<b>Import</b>”.</p>
+                                    <div style="display: flex;">
+                                        <div style="display: -webkit-box; padding: 20px;">
+                                            <img src="./img/defiant/Defiant-popup.PNG" id="defiant-no-wallets-popup" alt="Defiant no wallets popup" style="width: 50vh; height: 80vh;">
+                                            <label for="#defiant-no-wallets-popup">Form fresh install.</label>
+                                        </div>
+                                        <div style="display: -webkit-box; padding: 20px;">
+                                            <img src="./img/defiant/Defiant-MyWallets-menu.gif" id="defiant-mywallets-menu" alt="Defiant My Wallets Menu" style="width: 50vh; height: 80vh;">
+                                            <label for="#defiant-mywallets-menu">From 'My Wallets' menu.</label>
+                                        </div>
+                                    </div>
+                                    <p>In both cases, you can import a wallet by entering a <b>Seed Phrase</b> of words (also known as Recovery Phrase) or a <b>Private Key</b>.</p>
+                                    <p>Here are the steps to do it:</p>
+                                        <nav>
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <button class="nav-link active" id="nav-importing-seed-tab" data-bs-toggle="tab" data-bs-target="#nav-importing-seed" type="button" role="tab" aria-controls="nav-importing-seed" aria-selected="true">From Seed Phrase</button>
+                                                <button class="nav-link" id="nav-importing-pk-tab" data-bs-toggle="tab" data-bs-target="#nav-importing-pk" type="button" role="tab" aria-controls="nav-importing-pk" aria-selected="false">From Private Key</button>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-importing-seed" role="tabpanel" aria-labelledby="nav-importing-seed-tab">
+                                                <p><u><b>Using a Seed/Recovery Phrase</b></u></p>
+                                                <p><b>1)</b> At Step 1, select "WORDS" option and enter the words of your seed phrase into the text field, separated by spaces.</p>
+                                                <p><b>2)</b> At Step 2 "Configure your addresses", choose if you want your address to be the same for all your blockchains ("Standard derivation" option), or if you want a custom derivation ("Custom" option). Then, tap on "Continue".</p>
+                                                <p>⚠️<b><u>NOTE</u></b>⚠️: If you are trying to import a wallet that has a RSK Derivation Path (e.g. rWallet), you should tap on "<b>Custom</b>" and set the Derivation Path to RSK Mainnet value: <b>m/44’/137’/0’/0</b></p>
+                                                <p><b>3)</b> At Step 3 "Select coins", choose your preferred networks and select the coins/tokens you want to use in your wallet. Then, tap "Accept" twice. You will be able to modify them later.</p>
+                                                <p><b>4)</b> Completed the three steps, tap on "Continue". If everything is ok, you will have successfully completed the importing process.</p>
+                                                <img src="./img/defiant/Defiant_import_wallet_bySeed.gif" style="width: 50%; height: 50%;" alt="Defiant import wallet by Seed">
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-importing-pk" role="tabpanel" aria-labelledby="nav-importing-pk-tab">
+                                                <p><u><b>Using a Private key</b></u></p>
+                                                <p><b>1)</b> At Step 1, select "PRIVATE KEY" option and enter your private key into the text field.</p>
+                                                <p><b>2)</b> At Step 2 "Select coins", choose your preferred networks and select the coins/tokens you want to use in your wallet. Then, tap "Accept" twice. You will be able to modify them later.</p>
+                                                <p><b>3)</b> Completed the two steps, tap on "Continue". If everything is ok, you will have successfully completed the importing process.</p>
+                                                <img src="./img/defiant/Defiant_import_wallet_byPK.gif" style="width: 50%; height: 50%;" alt="Defiant import wallet by Private Key">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

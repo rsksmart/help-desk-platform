@@ -27,6 +27,8 @@ background-color: black;
     line-height: 28px
 }
 
+
+
 /* ==== COMMON STYLES ====*/
 section {
     padding-top: 80px;
@@ -84,17 +86,11 @@ h3 {
     font-weight: 400;
 }
 
-h4 {
-    color: #000;
-    margin-bottom: 0;
-}
-
 .h1_subtitle {
     margin-bottom: 30px;
 }
 
 @media (max-width:576px) {
-
     h1,
     h3,
     .h1_subtitle {
@@ -195,7 +191,10 @@ hr {
 .text{
     padding-right: 15px;
 }
-
+.main_row a:hover{
+    transition: ease-in-out .5s ease !important;
+    color: #d1d0cb;
+}
 .cat-card{
     display: flex;
     justify-content: space-between;
@@ -223,26 +222,6 @@ hr {
     font-size: 24px;
     color: white;
 }
-.cat-card:hover{
-    background-color: #FF9100;
-    transition: ease-in-out .5s ease !important;
-    color: white;
-}
-.cat-card-btm:hover{
-    background-color: #FF9100;
-    transition: ease-in-out .5s ease !important;
-    color: white;
-}
-.cat-card h4{
-    color: white;
-    font-size: 24px;
-}
-
-.cat-card-btm h4{
-    color: white;
-    font-size: 24px;
-}
-
 
 .card-title{
     text-align: left;

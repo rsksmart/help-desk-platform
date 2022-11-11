@@ -195,7 +195,10 @@ hr {
 .text{
     padding-right: 15px;
 }
-
+.main_row a:hover{
+    transition: ease-in-out .5s ease !important;
+    color: #d1d0cb;
+}
 .cat-card{
     display: flex;
     justify-content: space-between;
@@ -210,11 +213,7 @@ hr {
     color: white;
 }
 
-.cat-card:hover{
-    background-color: #FF9100;
-    transition: ease-in-out .5s !important;
-    color: white;
-}
+
 
 
 .cat-card-btm{
@@ -232,11 +231,7 @@ hr {
     color: white;
 }
 
-.cat-card-btm:hover{
-    background-color: #FF9100;
-    transition: ease-in-out .5s ease !important;
-    color: white;
-}
+
 
 
 .card-title{

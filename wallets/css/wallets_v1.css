@@ -242,11 +242,7 @@ hr {
     color: white;
 }
 
-.cat-card:hover{
-    background-color: #FF9100;
-    transition: ease-in-out .5s !important;
-    color: white;
-}
+
 
 
 .cat-card-btm{
@@ -264,11 +260,7 @@ hr {
     color: white;
 }
 
-.cat-card-btm:hover{
-    background-color: #FF9100;
-    transition: ease-in-out .5s ease !important;
-    color: white;
-}
+
 
 
 .card-title{

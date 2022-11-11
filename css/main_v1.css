@@ -207,9 +207,8 @@ hr {
     width: 60%;
 }
 .main_row a:hover{
-    background-color: #FF9100;
     transition: ease-in-out .5s ease !important;
-    color: white;
+    color: #d1d0cb;
 }
 
 .category-sec {

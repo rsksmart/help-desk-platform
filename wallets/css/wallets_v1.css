@@ -48,7 +48,7 @@ html {
 
 .white-outline-btn:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 body {
@@ -487,10 +487,6 @@ hr {
     z-index: -1;
 }
 
-.white-outline-btn:hover{
-    background-color: #faf9f5;
-    color: #000;
-}
 
 
 

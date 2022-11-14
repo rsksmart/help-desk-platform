@@ -150,6 +150,21 @@ hr {
 }
 
 
+button:active{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+button:focus{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+button:visited{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
 
 
 /* === PROGRESS === */
@@ -538,7 +553,7 @@ hr {
 
 .white-outline-btn:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 
@@ -589,10 +604,7 @@ hr {
     z-index: -1;
 }
 
-.white-outline-btn:hover{
-    background-color: #faf9f5;
-    color: #000;
-}
+
 
 .faq_btn{
     font-size: 18px;

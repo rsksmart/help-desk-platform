@@ -208,7 +208,7 @@ hr {
 }
 .main_row a:hover{
     transition: ease-in-out .5s ease !important;
-    color: #d1d0cb;
+    color: #FF9100;
 }
 
 .category-sec {
@@ -305,7 +305,7 @@ hr {
 
 .white-outline-btn:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 .btn_container{
@@ -437,10 +437,6 @@ hr {
     z-index: -1;
 }
 
-.white-outline-btn:hover{
-    background-color: #faf9f5;
-    color: #000;
-}
 
 
 @media only screen and (max-width: 1200px) and (min-width: 992px) {

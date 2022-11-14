@@ -343,7 +343,16 @@ hr {
 }
 
 
-
+button:active{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+button:focus{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
 @media (max-width:753px) {
     .card-title-ans h2{
        font-size: 36px;
@@ -570,7 +579,7 @@ hr {
 
 .white-outline-btn:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 .back_btn:hover {

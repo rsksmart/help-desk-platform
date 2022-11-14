@@ -48,7 +48,7 @@ html {
 
 .white-outline-btn:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 body {
@@ -230,7 +230,7 @@ hr {
 
 .main_row a:hover{
     transition: ease-in-out .5s ease !important;
-    color: #d1d0cb;
+    color: #FF9100;
 }
 
 .cat-card{
@@ -492,10 +492,7 @@ hr {
     z-index: -1;
 }
 
-.white-outline-btn:hover{
-    background-color: #faf9f5;
-    color: #000;
-}
+
 
 
 

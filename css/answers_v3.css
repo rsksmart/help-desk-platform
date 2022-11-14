@@ -570,7 +570,7 @@ hr {
 
 .white-outline-btn:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 .back_btn:hover {
@@ -614,4 +614,14 @@ hr {
 .faq_btn:hover{
     background-color: #faf9f5;
     color: #000;
+}
+button:active{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+button:focus{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
 }

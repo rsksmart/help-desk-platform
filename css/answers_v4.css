@@ -18,6 +18,7 @@ html {
     overflow-x: hidden
 }
 
+
 body {
     font-family: 'rootstock-sans-body', sans-serif;
     font-weight: 400;
@@ -38,6 +39,17 @@ section {
         display: none;
     }
 }
+
+
+@media (max-width:991px) {
+    .ml-4{
+    margin-left: 0 !important;
+    margin-top: 15px;
+    }
+}
+
+
+
 
 /* CUSTOM MARGINS AND PADDINGS */
 .mt-5 {
@@ -85,6 +97,7 @@ h4 {
     color: #000;
 }
 
+
 .h1_subtitle {
     margin-bottom: 30px;
 }
@@ -124,6 +137,16 @@ hr {
 .bold {
     font-weight: 700 !important
 }
+
+a{
+    color: #FF9100;
+}
+
+a:hover{
+    color: #cc7400;
+}
+
+
 
 .Quicksand {
     font-family: 'rootstock-sans-body', sans-serif;
@@ -205,7 +228,6 @@ hr {
 
 
 #accordion-faqs {
-    border: 1px solid #faf9f5;
     border-radius: 7px;
 }
 
@@ -215,7 +237,6 @@ hr {
 }
 
 #accordion-faqs .card {
-    border: #faf9f5 1px solid;
     border-radius: 7px;
     background-color: #000;
     padding: 5px 0 5px 0;
@@ -274,7 +295,7 @@ hr {
 }
 
 #accordion-faqs .btn-link {
-    font-size: 24px;
+    font-size: 1.3rem;
     font-family: 'rootstock-sans-body', sans-serif;
     width: 100%;
     text-align: left;
@@ -282,6 +303,7 @@ hr {
 
 #accordion-faqs .btn-link:hover {
     text-decoration: none;
+    color: #cc7400 !important;
 }
 .btn-link{
     color: white !important;
@@ -315,6 +337,9 @@ hr {
     content: "\f055";
 }
 
+
+
+
 /* ==== MAIN ==== */
 .main_cont{
     display: flex;
@@ -343,16 +368,7 @@ hr {
 }
 
 
-button:active{
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-}
-button:focus{
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-}
+
 @media (max-width:753px) {
     .card-title-ans h2{
        font-size: 36px;
@@ -369,6 +385,7 @@ button:focus{
     .white-outline-btn{
         width: 250px !important;
         font-size: 18px !important;
+        text-align: center;
     }
     .back_btn{
         width: 250px !important;
@@ -413,12 +430,16 @@ button:focus{
     font-family: 'rootstock-sans-body', sans-serif;
     background-color: #000;
     border: 1px solid #faf9f5;
-    color: #faf9f5;
+    color: #faf9f5 !important;
+    width: fit-content;
     border-radius: 40px;
-    padding: 10px 15px;
+    padding: 10px 15px !important;
     position: relative;
     display: block;
+    width: fit-content;
 }
+
+
 
 
 
@@ -438,7 +459,7 @@ button:focus{
 
 .nav-link:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 
@@ -559,6 +580,7 @@ button:focus{
     padding: 10px 15px;
     position: relative;
     display: block;
+    width: fit-content;
 }
 
 
@@ -623,4 +645,18 @@ button:focus{
 .faq_btn:hover{
     background-color: #faf9f5;
     color: #000;
+}
+button:active{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+button:focus{
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.btn{
+    padding: 0;
 }

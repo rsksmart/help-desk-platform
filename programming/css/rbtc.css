@@ -315,11 +315,12 @@ hr {
     font-family: 'rootstock-sans-body', sans-serif;
     background-color: #000;
     border: 1px solid #faf9f5;
-    color: #faf9f5;
+    color: #faf9f5 !important;
     border-radius: 40px;
-    padding: 10px 15px;
+    padding: 10px 15px !important;
     position: relative;
     display: block;
+    width: fit-content;
 }
 
 
@@ -340,7 +341,7 @@ hr {
 
 .nav-link:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 

@@ -22,9 +22,9 @@ body {
     font-family: 'rootstock-sans-body', sans-serif;
     font-weight: 400;
     color: white;
-    font-size: 16px;
-    line-height: 28px;
     background-color: #000;
+    font-size: 16px;
+    line-height: 28px
 }
 
 /* ==== COMMON STYLES ====*/
@@ -65,7 +65,6 @@ h4,
 h5,
 h6,
 .h1_subtitle {
-    font-family: 'rootstock-sans-body', sans-serif;
     line-height: 1;
 }
 
@@ -76,6 +75,10 @@ h3,
     font-size: 47px
 }
 
+.homepage h2 {
+    font-size: 55px;
+}
+
 h1,
 h3 {
     font-weight: 400;
@@ -83,6 +86,7 @@ h3 {
 
 h4 {
     color: #000;
+    margin-bottom: 0;
 }
 
 .h1_subtitle {
@@ -92,7 +96,8 @@ h4 {
 @media (max-width:576px) {
 
     h1,
-    h3 {
+    h3,
+    .h1_subtitle {
         font-size: 30px
     }
 }
@@ -150,8 +155,6 @@ hr {
 }
 
 
-
-
 /* === PROGRESS === */
 .progress {
     background: #e6e7e8;
@@ -175,145 +178,8 @@ hr {
   
   @keyframes load {
     0% { width: 33%; }
-    100% { width: 100%; }
+    100% { width: 66%; }
   }
-
-/*======= FAQS==========*/
-
-
-.video_wrapper{
-    position: relative;
-    padding-bottom: 56.25%;
-    /* Equals 16:9 */
-    height: 0;
-}
-
-.video_wrapper iframe{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-#faqs{
-    margin-bottom: 3.7rem;
-    background-color: #000;
-}
-
-
-#accordion-faqs {
-    border: 1px solid #faf9f5;
-    border-radius: 7px;
-}
-
-.faq_row{
-    width: 100%;
-    display: block;
-}
-
-#accordion-faqs .card {
-    border: #faf9f5 1px solid;
-    border-radius: 7px;
-    background-color: #000;
-    padding: 5px 0 5px 0;
-    outline: none;
-    z-index: 1;
-}
-
-#accordion-faqs .card-header {
-    background-color: unset;
-    border-bottom: unset;
-    padding: 0;
-    width: 100%;
-}
-
-
-
-#accordion-faqs .card-body {
-    padding: 1rem 65px;
-    z-index: 1;
-}
-
-#accordion-faqs [data-toggle="collapse"] .fa:before {
-    content: "\f056";
-}
-
-#accordion-faqs [data-toggle="collapse"].collapsed .fa:before {
-    content: "\f055";
-}
-
-@media (max-width: 991px) {
-
-    #accordion-faqs [data-toggle="collapse"] .fa:before,
-    #accordion-faqs [data-toggle="collapse"].collapsed .fa:before {
-        top: 4px;
-    }
-
-    #accordion-faqs .card-body {
-        padding: 1rem;
-    }
-}
-
-#accordion-faqs [data-toggle="collapse"] {
-    color: #00b520;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-#accordion-faqs [data-toggle="collapse"].collapsed {
-    color: white;
-}
-
-/*#accordion-faqs .btn-link{color:#000;}*/
-#accordion-faqs h3 {
-    margin-bottom: 0px;
-    /*font-weight: 700;*/
-}
-
-#accordion-faqs .btn-link {
-    font-size: 24px;
-    font-family: 'rootstock-sans-body', sans-serif;
-    width: 100%;
-    text-align: left;
-}
-
-#accordion-faqs .btn-link:hover {
-    text-decoration: none;
-}
-.btn-link{
-    color: white !important;
-}
-
-.btn-link:focus{
-    color: white !important;
-}
-.btn-link:active{
-    color: white !important;
-    outline: none;
-}
-
-
-#accordion-faqs .btn-link .fa {
-    margin-right: 15px;
-    font-size: 25px
-}
-
-@media (max-width: 991px) {
-    #accordion-faqs .btn-link .fa {
-        font-size: 21px;
-    }
-}
-
-#accordion-faqs [data-toggle="collapse"] .fa:before {
-    content: "\f056";
-}
-
-#accordion-faqs [data-toggle="collapse"].collapsed .fa:before {
-    content: "\f055";
-}
 
 /* ==== MAIN ==== */
 .main_cont{
@@ -326,63 +192,71 @@ hr {
 .main_row{
     width: 60%;
 }
+.text{
+    padding-right: 15px;
+}
+.main_row a:hover{
+    transition: ease-in-out .5s ease !important;
+    color: #FF9100;
+}
+
+.text h4{
+    font-size: 1.3rem;
+ }
+
+.cat-card{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    align-items: center;
+    border-top: solid 1px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    padding: 15px 45px 15px 45px;
+    font-family: 'rootstock-sans-body', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
 
 
-.card-title-ans{
+
+
+.cat-card-btm{
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    border-right: solid 1px white;
+    border-left: solid 1px white;
+    border-radius: 7px;
+    padding: 15px 45px 15px 45px;
+    align-items: center;
+    font-family: 'rootstock-sans-body', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+
+
+.card-title{
     text-align: left;
     font-weight: bold;
     line-height: 3rem;
     margin-top: 2rem;
 }
-.card-title-ans h2{
-    font-family: 'rootstock-sans-headline', sans-serif;
+.card-title h2{
     font-weight: bold;
-    font-size: 56px;
+    font-size: 3.5rem;
     color: white;
-    margin-bottom: 3.5rem;
+    font-family: 'rootstock-sans-headline', sans-serif;
 }
+.card-title p{
+    color: white;
+    margin-top: 3rem;
+    font-family: 'rootstock-sans-body', sans-serif;
+    font-size: 20px;
 
-
-button:active{
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-}
-button:focus{
-    box-shadow: none !important;
-    border: none !important;
-    outline: none !important;
-}
-@media (max-width:753px) {
-    .card-title-ans h2{
-       font-size: 36px;
-    }
-    .progbar p{
-        font-size: 18px;
-    }
-    .main_row{
-        width: 85%;
-    }
-    #accordion-faqs .btn-link {
-        font-size: 20px;
-    }
-    .white-outline-btn{
-        width: 250px !important;
-        font-size: 18px !important;
-    }
-    .back_btn{
-        width: 250px !important;
-        margin-bottom: 25px;
-        font-size: 18px !important;
-    }
-    .btn_row{
-        display: flex;
-        flex-direction: column;
-    }
-    .btn_container{
-        display: flex;
-        justify-content: center;
-    }
 }
 
 .progbar {
@@ -394,6 +268,39 @@ button:focus{
 
 
 
+@media (max-width:709px) {
+    .progbar p{
+        font-size: 18px;
+    }
+    .main_row{
+        width: 85%;
+    }
+    .cat-card{
+        padding: 15px 25px 15px 25px;
+        font-size: 18px;
+    }
+    .cat-card-btm{
+        padding: 15px 25px 15px 25px;
+        font-size: 18px;
+    }
+    .icon{
+        font-size: 18px;
+    }
+    .card-title h2{
+        font-size: 36px;
+    }
+    .back_btn{
+        width: 100% !important;
+        font-size: 18px !important;
+    }
+}
+
+
+
+
+
+
+/* ==== NAVBAR ==== */
 /* ==== NAVBAR ==== */
 .logo {
     width: 150px;
@@ -405,19 +312,17 @@ button:focus{
     width: 90px !important;
 }
 
-
-
-
 .nav-link{
     font-size: 18px;
     font-family: 'rootstock-sans-body', sans-serif;
     background-color: #000;
     border: 1px solid #faf9f5;
-    color: #faf9f5;
+    color: #faf9f5 !important;
     border-radius: 40px;
-    padding: 10px 15px;
+    padding: 10px 15px !important;
     position: relative;
     display: block;
+    width: fit-content;
 }
 
 
@@ -438,7 +343,7 @@ button:focus{
 
 .nav-link:hover{
     background-color: #faf9f5;
-    color: #000;
+    color: #000 !important;
 }
 
 
@@ -519,41 +424,23 @@ button:focus{
     cursor: default !important;
 }
 
-
 /* ==== BUTTONS ====*/
 
 .btn_container{
     margin-bottom: 10vh;
     width: 100%;
+    margin-top: 3.7rem;
 }
 .btn_row{
     display: flex;
     justify-content: space-between;
 }
 
-.back_btn {
-    font-family: 'rootstock-sans-body', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    color: white;
-    background-color: transparent;
-    border: none;
-    font-weight: bold;
-}
-
-.back_btn:hover {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-
 .white-outline-btn{
     font-size: 18px;
     font-family: 'rootstock-sans-body', sans-serif;
     background-color: #000;
-    border: 1px solid #faf9f5 !important;
+    border: 1px solid #faf9f5;
     color: #faf9f5;
     border-radius: 40px;
     padding: 10px 15px;
@@ -582,6 +469,18 @@ button:focus{
     color: #000 !important;
 }
 
+
+
+.back_btn {
+    font-family: 'rootstock-sans-body', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
 .back_btn:hover {
     color: white;
     text-decoration: none;
@@ -591,36 +490,5 @@ button:focus{
 }
 
 
-.faq_btn{
-    font-size: 18px;
-    font-family: 'rootstock-sans-body', sans-serif;
-    background-color: #000;
-    border: 1px solid #faf9f5 !important;
-    color: #faf9f5;
-    border-radius: 40px;
-    padding: 10px 15px;
-    position: relative;
-    display: block;
-    width: fit-content;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
 
-.faq_btn:after {
-    border: 1px solid #faf9f5;
-    border-radius: 40px;
-    content: "";
-    display: inline-block;
-    height: 100%;
-    left: 5px;
-    padding: inherit;
-    position: absolute;
-    top: 5px;
-    width: 100%;
-    z-index: -1;
-}
 
-.faq_btn:hover{
-    background-color: #faf9f5;
-    color: #000;
-}
